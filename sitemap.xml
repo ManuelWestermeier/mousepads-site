@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Hauptseite - Höchste Priorität -->
+    <url>
+        <loc>https://mousepads.easy-einkauf.de/index.html</loc>
+        <lastmod>2024-04-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://mousepads.easy-einkauf.de/images/1.png</image:loc>
+            <image:title>Fokus & Gaming Mousepad V2 - Produktbild</image:title>
+            <image:caption>Premium Made in Germany Mousepad</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://mousepads.easy-einkauf.de/designs/1.png</image:loc>
+            <image:title>Fokus & Gaming Mousepad V2 - Design Cover</image:title>
+            <image:caption>Modernes Design mit leuchtend blau und rot Akzenten</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Impressum - Wichtig für DSGVO & Ranking -->
+    <!-- <url>
+        <loc>https://mousepads.easy-einkauf.de/impressum.html</loc>
+        <lastmod>2024-04-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url> -->
+
+    <!-- Datenschutz - Wichtig für DSGVO & Ranking -->
+    <!-- <url>
+        <loc>https://mousepads.easy-einkauf.de/datenschutz.html</loc>
+        <lastmod>2024-04-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url> -->
+
+    <!-- Alternative URLs wenn mehrsprachig erweitert -->
+    <!-- 
+    <url>
+        <loc>https://mousepads.easy-einkauf.de/en/</loc>
+        <lastmod>2024-04-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    -->
+
+</urlset>
