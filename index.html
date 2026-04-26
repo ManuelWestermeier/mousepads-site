@@ -16,24 +16,69 @@
 
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Fokus Gaming Mousepad V2",
-      "description": "Premium Gaming Mauspad für präzise Kontrolle und schnelle Bewegungen.",
-      "brand": { "@type": "Brand", "name": "Fokus" },
-      "image": ["https://mousepads.easy-einkauf.de/1.jpg","https://mousepads.easy-einkauf.de/2.jpg"],
-      "sku": "FGM-V2",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mousepads.easy-einkauf.de/",
-        "priceCurrency": "EUR",
-        "price": "12.99",
-        "availability": "https://schema.org/InStock"
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Fokus Gaming Mousepad V2",
+  "description": "Premium Gaming Mauspad für präzise Kontrolle und schnelle Bewegungen.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Fokus"
+  },
+  "image": [
+    "https://mousepads.easy-einkauf.de/1.jpg",
+    "https://mousepads.easy-einkauf.de/2.jpg"
+  ],
+  "sku": "FGM-V2",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://mousepads.easy-einkauf.de/",
+    "priceCurrency": "EUR",
+    "price": "12.99",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "EUR"
       },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "127" }
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "DE"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "d"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "d"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 14,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn",
+      "applicableCountry": "DE"
     }
-    </script>
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
+  }
+}
+</script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
