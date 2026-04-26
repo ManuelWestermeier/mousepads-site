@@ -357,18 +357,15 @@
         .benefit-icon { font-size: 1.3rem; margin-bottom: 0.4rem; }
         .benefit-text { font-size: 0.8rem; color: var(--text); line-height: 1.4; }
 
-        /* Reviews */
-        .reviews-list { display: flex; flex-direction: column; gap: 10px; }
-        .review-card {
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 1rem;
+        .cta-btn--secondary {
+            background: var(--surface2);
+            color: var(--gold);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            border: 1.5px solid var(--gold-border);
         }
-        .review-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
-        .stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 1px; }
-        .reviewer { font-size: 0.75rem; color: var(--text); opacity: 0.5; font-weight: 600; }
-        .review-text { font-size: 0.88rem; color: var(--text); font-style: italic; line-height: 1.5; }
+        .cta-btn--secondary:active {
+            background: var(--surface);
+        }
 
         /* Bottom CTA section */
         .bottom-cta {
@@ -403,7 +400,6 @@
             .img-slot { aspect-ratio: auto; min-height: 260px; }
             .buy-panel { flex: 1; max-width: 420px; }
             .benefits-grid { grid-template-columns: 1fr 1fr; }
-            .reviews-list { display: grid; grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
@@ -489,9 +485,10 @@
             <div class="discount-badge" id="discountBadge"></div>
 
             <!-- CTA -->
-            <div>
-                <a href="https://ebay.us/m/Wgofpw" target="_blank" rel="noopener" class="cta-btn">🛒 Jetzt auf eBay kaufen</a>
-                <div class="cta-sub">Sichere Zahlung & Käuferschutz über eBay</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <a href="https://ebay.us/m/Wgofpw" target="_blank" rel="noopener" class="cta-btn">🛒 Auf eBay kaufen</a>
+                <a href="https://www.kleinanzeigen.de/s-anzeige/qualitativ-hochwertige-mousepads-20x20-/3392787978-225-5723" target="_blank" rel="noopener" class="cta-btn cta-btn--secondary">📌 Auf Kleinanzeigen</a>
+                <div class="cta-sub">Sichere Zahlung & Käuferschutz</div>
             </div>
 
             <!-- Scroll hint -->
@@ -545,37 +542,11 @@
         </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section class="section">
-        <div class="section-title">Kunden<span>bewertungen</span></div>
-        <div class="reviews-list">
-            <div class="review-card">
-                <div class="review-top">
-                    <div class="stars">★★★★★</div>
-                    <div class="reviewer">Markus K. · verifiziert</div>
-                </div>
-                <div class="review-text">„Absolut top! Gleitet perfekt, kein Verrutschen. Meine Aim ist merklich besser geworden."</div>
-            </div>
-            <div class="review-card">
-                <div class="review-top">
-                    <div class="stars">★★★★★</div>
-                    <div class="reviewer">Sarah M. · verifiziert</div>
-                </div>
-                <div class="review-text">„Sieht genauso aus wie auf den Fotos. Qualität überzeugt – für den Preis unschlagbar."</div>
-            </div>
-            <div class="review-card">
-                <div class="review-top">
-                    <div class="stars">★★★★☆</div>
-                    <div class="reviewer">Tobias R. · verifiziert</div>
-                </div>
-                <div class="review-text">„Schnelle Lieferung, sehr gute Verarbeitung. Habe gleich zwei Stück bestellt."</div>
-            </div>
-        </div>
-    </section>
 
     <!-- BOTTOM CTA -->
     <div class="bottom-cta">
-        <a href="https://ebay.us/m/Wgofpw" target="_blank" rel="noopener" class="cta-btn">🛒 Jetzt auf eBay kaufen</a>
+        <a href="https://ebay.us/m/Wgofpw" target="_blank" rel="noopener" class="cta-btn">🛒 Auf eBay kaufen</a>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/qualitativ-hochwertige-mousepads-20x20-/3392787978-225-5723" target="_blank" rel="noopener" class="cta-btn cta-btn--secondary">📌 Auf Kleinanzeigen</a>
         <p>Sichere Abwicklung · Käuferschutz · Kostenloser Versand</p>
     </div>
 </main>
