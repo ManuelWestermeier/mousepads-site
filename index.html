@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fokus Gaming Mousepad V2 – Premium 20×20cm Made in Germany. Mengenrabatt: ab 2 Stück EUR 11,69. Perfekt für Gaming & Produktivität.">
-    <meta name="keywords" content="gaming mousepad, premium mousepad, mousepad deutschland, fokus mousepad, kaufen">
+    <meta name="description" content="Fokus Gaming Mousepad V2 – Premium 20×20cm Made in Germany. EUR 12,99 + Gratis Versand (2,5 Tage). Ab 2 Stück 10% Rabatt.">
+    <meta name="keywords" content="gaming mousepad, mousepad deutschland, premium mousepad, fokus mousepad">
     <meta name="author" content="Easy-Einkauf">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1a1a1a">
     
     <meta property="og:title" content="Fokus Gaming Mousepad V2 – Premium Made in Germany">
-    <meta property="og:description" content="20×20cm Mousepad für Gaming & Produktivität. Mengenrabatt ab 2 Stück. Made in Germany.">
+    <meta property="og:description" content="EUR 12,99 + Gratis Versand. Ab 2 Stück 10% Rabatt. Jetzt auf eBay kaufen.">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://mousepads.easy-einkauf.de/">
     
@@ -26,13 +26,12 @@
         "name": "Fokus & Gaming Mousepad V2",
         "description": "Premium Gaming Mousepad 20×20cm Made in Germany",
         "brand": {"@type": "Brand", "name": "Fokus"},
-        "image": ["https://mousepads.easy-einkauf.de/1.jpg", "https://mousepads.easy-einkauf.de/2.jpg"],
+        "image": "https://mousepads.easy-einkauf.de/1.jpg",
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "EUR",
             "lowPrice": "10.39",
-            "highPrice": "12.99",
-            "offerCount": "4"
+            "highPrice": "12.99"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -60,11 +59,11 @@
             --light-text: #e5e5e5;
             --white: #ffffff;
             --border: #333333;
+            --danger: #ef4444;
         }
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
 
         body {
@@ -79,247 +78,329 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(15, 15, 15, 0.95);
+            background: rgba(15, 15, 15, 0.98);
             backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--border);
-            padding: 1rem 1.5rem;
+            padding: 0.75rem 1rem;
         }
 
         .header-inner {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             color: var(--primary);
+            white-space: nowrap;
         }
 
-        .timer {
-            background: var(--medium-bg);
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            font-size: 0.9rem;
-            font-weight: 600;
+        .header-timer {
+            background: rgba(25, 25, 25, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            font-size: 0.8rem;
             font-family: 'Courier New', monospace;
+            text-align: right;
+            min-width: 140px;
         }
 
         .timer-label {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--light-text);
-            opacity: 0.7;
-            margin-bottom: 0.2rem;
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .timer-display {
+        .timer-value {
             color: var(--primary);
-            font-size: 1.1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
             letter-spacing: 1px;
         }
 
         /* ===== HERO ===== */
         .hero {
-            padding: 4rem 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
-        .hero-grid {
+        .hero-wrapper {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1.1fr 1fr;
             gap: 3rem;
             align-items: center;
         }
 
-        .hero-content h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .hero-content p {
-            font-size: 1rem;
-            color: var(--light-text);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .product-image {
-            width: 100%;
+        /* PRODUCT IMAGE */
+        .hero-image {
+            position: relative;
             aspect-ratio: 1;
             background: linear-gradient(135deg, var(--medium-bg), var(--dark-bg));
             border: 1px solid var(--border);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
-        .product-image img {
+        .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.03);
         }
 
         .image-placeholder {
-            color: var(--light-text);
-            opacity: 0.5;
-            text-align: center;
-            font-size: 3rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(212, 165, 116, 0.3);
         }
 
-        /* ===== PRICING SECTION ===== */
-        .pricing-section {
-            background: var(--medium-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 2rem 1.5rem;
-            margin: 2rem 0;
+        /* PURCHASE INFO */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .pricing-title {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+        .product-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .product-title .highlight {
             color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
         }
 
-        .quantity-selector {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-        }
-
-        .qty-button {
-            padding: 1rem;
-            background: var(--dark-bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            color: var(--light-text);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-weight: 600;
+        .product-meta {
+            display: flex;
+            gap: 1.5rem;
             font-size: 0.9rem;
         }
 
-        .qty-button:hover {
-            border-color: var(--primary);
-            color: var(--primary);
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .qty-button.active {
-            background: var(--primary);
-            color: var(--dark);
-            border-color: var(--primary);
+        .meta-icon {
+            font-size: 1.2rem;
         }
 
-        .price-display {
-            background: var(--dark-bg);
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
+        /* PRICING BOX */
+        .price-box {
+            background: var(--medium-bg);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .price-main {
             text-align: center;
         }
 
         .price-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: var(--light-text);
             opacity: 0.7;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .price-value {
-            font-size: 2.2rem;
-            font-weight: 700;
+        .price-current {
+            font-size: 3rem;
+            font-weight: 800;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            line-height: 1;
+            margin-bottom: 0.3rem;
         }
 
-        .price-unit {
+        .price-shipping {
             font-size: 0.9rem;
             color: var(--light-text);
+        }
+
+        .price-future {
+            font-size: 0.8rem;
+            color: var(--light-text);
+            opacity: 0.6;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        /* QUANTITY & SAVINGS */
+        .quantity-info {
+            background: rgba(212, 165, 116, 0.05);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 6px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .quantity-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--light-text);
             opacity: 0.7;
+            margin-bottom: 0.5rem;
         }
 
-        .savings-badge {
-            display: inline-block;
-            background: rgba(212, 165, 116, 0.15);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
+        .discount-value {
+            font-size: 1.4rem;
+            font-weight: 700;
             color: var(--primary);
-            font-weight: 600;
-            margin-top: 1rem;
         }
 
-        /* ===== CTA BUTTON ===== */
+        .discount-text {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-top: 0.3rem;
+        }
+
+        /* QUANTITY SELECTOR */
+        .qty-selector {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+        }
+
+        .qty-btn {
+            padding: 0.7rem;
+            background: var(--dark-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--light-text);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+        }
+
+        .qty-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .qty-btn.active {
+            background: var(--primary);
+            color: var(--dark);
+            border-color: var(--primary);
+        }
+
+        /* CTA BUTTON */
         .cta-button {
             width: 100%;
-            padding: 1.2rem;
-            background: var(--primary);
+            padding: 1.3rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), #c2984f);
             color: var(--dark);
             border: none;
             border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 1.1rem;
+            font-weight: 800;
             letter-spacing: 0.5px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: block;
             text-align: center;
+            box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
         }
 
         .cta-button:hover {
             background: var(--white);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4);
         }
 
         .cta-button:active {
             transform: translateY(0);
         }
 
-        /* ===== FEATURES GRID ===== */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
+        .cta-subtext {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--light-text);
+            opacity: 0.6;
+            margin-top: 0.8rem;
         }
 
-        .feature-item {
+        /* TRUST SIGNALS */
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .trust-item {
             text-align: center;
         }
 
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+        .trust-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
         }
 
-        .feature-text {
+        .trust-text {
+            font-size: 0.75rem;
+            color: var(--light-text);
+            line-height: 1.3;
+        }
+
+        /* URGENCY BAR */
+        .urgency-bar {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 6px;
+            padding: 1rem;
+            text-align: center;
             font-size: 0.85rem;
             color: var(--light-text);
-            line-height: 1.4;
         }
 
-        /* ===== PRODUCT DETAILS ===== */
-        .details-section {
-            padding: 3rem 1.5rem;
-            max-width: 1200px;
+        .urgency-bar strong {
+            color: var(--danger);
+        }
+
+        /* ===== DETAILS SECTION ===== */
+        .details {
+            padding: 4rem 1rem;
+            background: var(--dark-bg);
+            border-top: 1px solid var(--border);
+        }
+
+        .details-wrapper {
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -332,16 +413,16 @@
 
         .details-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-bottom: 3rem;
         }
 
         .detail-image {
+            aspect-ratio: 1;
             background: linear-gradient(135deg, var(--medium-bg), var(--dark-bg));
             border: 1px solid var(--border);
             border-radius: 8px;
-            aspect-ratio: 1;
             overflow: hidden;
         }
 
@@ -352,13 +433,12 @@
         }
 
         .detail-content h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .detail-content p {
-            color: var(--light-text);
             margin-bottom: 1rem;
             line-height: 1.6;
         }
@@ -369,19 +449,15 @@
         }
 
         .specs-list li {
-            padding: 0.75rem 0;
+            padding: 0.6rem 0;
             border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            font-size: 0.95rem;
         }
 
         .specs-list li:last-child {
             border-bottom: none;
-        }
-
-        .spec-name {
-            font-weight: 500;
         }
 
         .spec-value {
@@ -389,15 +465,16 @@
             font-weight: 600;
         }
 
-        /* ===== BENEFITS ===== */
         .benefits-list {
             list-style: none;
+            column-count: 2;
+            column-gap: 2rem;
         }
 
         .benefits-list li {
-            padding: 0.75rem 0 0.75rem 2rem;
+            padding: 0.7rem 0 0.7rem 1.8rem;
             position: relative;
-            color: var(--light-text);
+            break-inside: avoid;
         }
 
         .benefits-list li::before {
@@ -406,59 +483,57 @@
             left: 0;
             color: var(--primary);
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         /* ===== REVIEWS ===== */
-        .reviews-section {
-            padding: 3rem 1.5rem;
-            max-width: 1200px;
+        .reviews {
+            padding: 3rem 1rem;
+            max-width: 1400px;
             margin: 0 auto;
-            background: var(--medium-bg);
-            border-radius: 8px;
-            margin-top: 3rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
         .review-card {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .review-card:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+            background: var(--medium-bg);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
         }
 
         .review-stars {
             color: var(--primary);
+            margin-bottom: 0.8rem;
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
         }
 
         .review-text {
             font-size: 0.95rem;
             color: var(--light-text);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             line-height: 1.5;
         }
 
         .review-author {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--light-text);
             opacity: 0.7;
+            font-weight: 500;
         }
 
         /* ===== FOOTER ===== */
         footer {
             border-top: 1px solid var(--border);
-            padding: 2rem 1.5rem;
+            padding: 2rem 1rem;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--light-text);
-            opacity: 0.7;
-            margin-top: 3rem;
+            opacity: 0.6;
         }
 
         .footer-links {
@@ -473,41 +548,63 @@
         }
 
         /* ===== RESPONSIVE ===== */
-        @media (min-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
+        @media (max-width: 1024px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .details-grid {
-                grid-template-columns: 1.2fr 1fr;
-            }
-
-            .quantity-selector {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header-inner {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .quantity-selector {
-                grid-template-columns: repeat(2, 1fr);
+            .product-title {
+                font-size: 1.8rem;
             }
 
             .details-grid {
                 grid-template-columns: 1fr;
             }
 
-            .hero-content h1 {
-                font-size: 1.6rem;
+            .benefits-list {
+                column-count: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .hero {
+                padding: 1rem;
+            }
+
+            .product-title {
+                font-size: 1.4rem;
+            }
+
+            .price-current {
+                font-size: 2.2rem;
+            }
+
+            .price-box {
+                padding: 1.5rem;
+            }
+
+            .product-meta {
+                flex-direction: column;
+                gap: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .qty-selector {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .details {
+                padding: 2rem 1rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -518,125 +615,157 @@
     <header>
         <div class="header-inner">
             <div class="logo">FOKUS</div>
-            <div class="timer">
-                <div class="timer-label">Angebot endet in</div>
-                <div class="timer-display" id="timerDisplay">2d 12h 34m 56s</div>
+            <div class="header-timer">
+                <div class="timer-label">⏰ ENDET IN</div>
+                <div class="timer-value" id="timerValue">2d 12h 34m 56s</div>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1>Gaming Mousepad V2</h1>
-                    <p>Premium-Mousepad aus Deutschland. Entwickelt für maximale Kontrolle und Präzision beim Gaming und der Arbeit.</p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-wrapper">
+            <!-- PRODUCT IMAGE -->
+            <div class="hero-image">
+                <img src="https://mousepads.easy-einkauf.de/1.jpg" alt="Fokus Gaming Mousepad V2" onerror="this.parentElement.innerHTML='<div class=\"image-placeholder\">📦</div>'">
+            </div>
+
+            <!-- PURCHASE SECTION -->
+            <div class="hero-content">
+                <div>
+                    <h1 class="product-title">Fokus Gaming <span class="highlight">Mousepad V2</span></h1>
                     
-                    <div class="features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🇩🇪</div>
-                            <div class="feature-text">Made in Germany</div>
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⭐</span>
+                            <span><strong>4.8/5</strong> (127 Bewertungen)</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">⭐</div>
-                            <div class="feature-text">4,8/5 (127)</div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🇩🇪</span>
+                            <span><strong>Made in Germany</strong></span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🚚</div>
-                            <div class="feature-text">Versand inkl.</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">💎</div>
-                            <div class="feature-text">Premium Material</div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📦</span>
+                            <span><strong>20×20 cm</strong></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-image">
-                    <img src="https://mousepads.easy-einkauf.de/1.jpg" alt="Fokus Gaming Mousepad V2" onerror="this.parentElement.innerHTML='<div class=\"image-placeholder\">📦</div>'">
+                <!-- PRICING BOX -->
+                <div class="price-box">
+                    <div class="price-main">
+                        <div class="price-label">Aktueller Preis (2,5 Tage)</div>
+                        <div class="price-current">EUR 12,99</div>
+                        <div class="price-shipping">✓ Versand inkludiert</div>
+                        <div class="price-future">Danach: EUR 16,99 + EUR 3,99 Versand</div>
+                    </div>
+
+                    <!-- QUANTITY SELECTOR -->
+                    <div>
+                        <div class="quantity-info">
+                            <div class="quantity-label">Menge wählen & sparen</div>
+                            <div class="discount-value" id="discountValue">0%</div>
+                            <div class="discount-text" id="discountText">ab 2 Stück 10% Rabatt</div>
+                        </div>
+
+                        <div class="qty-selector" style="margin-top: 1rem;">
+                            <button class="qty-btn active" data-qty="1" onclick="updatePricing(1)">1x</button>
+                            <button class="qty-btn" data-qty="2" onclick="updatePricing(2)">2x</button>
+                            <button class="qty-btn" data-qty="3" onclick="updatePricing(3)">3x</button>
+                            <button class="qty-btn" data-qty="4" onclick="updatePricing(4)">4+x</button>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTON -->
+                    <a href="https://ebay.us/m/Wgofpw" class="cta-button">
+                        🛒 JETZT AUF EBAY KAUFEN
+                    </a>
+                    <div class="cta-subtext">Sicher bezahlen • Versand & Rückgabe über eBay</div>
+
+                    <!-- TRUST SIGNALS -->
+                    <div class="trust-signals">
+                        <div class="trust-item">
+                            <div class="trust-icon">🔒</div>
+                            <div class="trust-text">Sicher<br>bezahlen</div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">⚡</div>
+                            <div class="trust-text">Schneller<br>Versand</div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">↩️</div>
+                            <div class="trust-text">Einfache<br>Rückgabe</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- URGENCY BAR -->
+                <div class="urgency-bar">
+                    ⏰ Sonderpreis mit kostenlosem Versand nur noch <strong id="remainingDays">2,5 Tage</strong> verfügbar
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- PRICING -->
-            <div class="pricing-section">
-                <div class="pricing-title">Menge wählen & sparen</div>
-                
-                <div class="quantity-selector">
-                    <button class="qty-button active" data-qty="1" onclick="updatePrice(1)">1 Stück</button>
-                    <button class="qty-button" data-qty="2" onclick="updatePrice(2)">2 Stück</button>
-                    <button class="qty-button" data-qty="3" onclick="updatePrice(3)">3 Stück</button>
-                    <button class="qty-button" data-qty="4" onclick="updatePrice(4)">4+ Stück</button>
-                </div>
-
-                <div class="price-display">
-                    <div class="price-label">Preis pro Stück</div>
-                    <div class="price-value" id="priceDisplay">EUR 12,99</div>
-                    <div class="price-unit">Gesamtpreis mit Versand</div>
-                    <div id="totalPrice" style="margin-top: 0.5rem; color: var(--primary); font-weight: 600;">EUR 12,99</div>
-                    <div class="savings-badge" id="savingsBadge" style="display: none;">Sparen Sie <span id="savingsAmount">0%</span></div>
-                </div>
-
-                <a href="https://ebay.us/m/Wgofpw" class="cta-button">Auf eBay kaufen</a>
-                <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--light-text); opacity: 0.7;">Versand & Rückgabe über eBay</p>
-            </div>
-        </section>
-
-        <!-- PRODUCT DETAILS -->
-        <section class="details-section">
-            <h2 class="section-title">Produktdetails</h2>
+    <!-- DETAILS SECTION -->
+    <section class="details">
+        <div class="details-wrapper">
+            <h2 class="section-title">Warum Fokus?</h2>
 
             <div class="details-grid">
                 <div class="detail-image">
-                    <img src="https://mousepads.easy-einkauf.de/2.jpg" alt="Fokus Gaming Mousepad Details" onerror="this.parentElement.innerHTML='<div class=\"image-placeholder\">📸</div>'">
+                    <img src="https://mousepads.easy-einkauf.de/2.jpg" alt="Fokus Mousepad Details" onerror="this.parentElement.innerHTML='<div style=\"width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(212,165,116,0.3)\">📸</div>'">
                 </div>
 
                 <div class="detail-content">
-                    <h3>Warum Fokus wählen?</h3>
-                    <p>Das Gaming Mousepad V2 kombiniert hochwertiges deutsches Handwerk mit modernem Design. Die optimierte Oberflächentextur bietet die perfekte Balance zwischen Gleitfähigkeit und Kontrolle.</p>
+                    <h3>Premium-Material & Verarbeitung</h3>
+                    <p>Das Gaming Mousepad V2 ist das Resultat intensiver Entwicklung. Jedes Detail wurde optimiert für maximale Performance beim Gaming und bei der Arbeit.</p>
 
                     <h3 style="margin-top: 1.5rem;">Technische Spezifikationen</h3>
                     <ul class="specs-list">
                         <li>
-                            <span class="spec-name">Größe</span>
+                            <span>Größe</span>
                             <span class="spec-value">20 × 20 cm</span>
                         </li>
                         <li>
-                            <span class="spec-name">Material</span>
+                            <span>Material</span>
                             <span class="spec-value">Premium-Mix</span>
                         </li>
                         <li>
-                            <span class="spec-name">Gewicht</span>
+                            <span>Gewicht</span>
                             <span class="spec-value">Ultra-leicht</span>
                         </li>
                         <li>
-                            <span class="spec-name">Herkunft</span>
+                            <span>Herkunft</span>
                             <span class="spec-value">Deutschland</span>
                         </li>
                         <li>
-                            <span class="spec-name">Beschichtung</span>
-                            <span class="spec-value">Hochwertig</span>
+                            <span>Anti-Rutsch</span>
+                            <span class="spec-value">✓ Ja</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <h3>Vorteile</h3>
+            <h2 class="section-title" style="margin-top: 3rem;">Die wichtigsten Vorteile</h2>
             <ul class="benefits-list">
-                <li>Optimierte Oberflächentextur für präzise Mausbewegungen</li>
+                <li>Optimierte Oberflächentextur für höchste Mausgeschwindigkeit</li>
                 <li>Professionelle Anti-Rutsch-Unterseite mit Grip-Technologie</li>
-                <li>Langlebiges Material mit bewährter Haltbarkeit</li>
+                <li>Langlebiges Premium-Material mit bewährter Haltbarkeit</li>
                 <li>Ergonomisches Design für komfortable Handposition</li>
                 <li>Perfekt für Competitive Gaming und Produktivität</li>
-                <li>Einfache Reinigung und Pflege</li>
-                <li>Kompatibel mit allen Maustypen</li>
+                <li>Einfache Reinigung und lange Lebensdauer</li>
+                <li>Kompatibel mit allen Maustypen und Sensitivitäten</li>
+                <li>Made in Germany – höchste Qualitätsstandards</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <!-- REVIEWS -->
-        <section class="reviews-section">
-            <h2 class="section-title">Kundenbewertungen</h2>
+    <!-- REVIEWS SECTION -->
+    <section class="reviews">
+        <h2 class="section-title">Das sagen echte Kunden</h2>
 
+        <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-stars">⭐⭐⭐⭐⭐</div>
                 <div class="review-text">"Bestes Gaming Mousepad das ich je hatte. Die Kontrolle ist unglaublich und es rutscht überhaupt nicht weg."</div>
@@ -651,11 +780,11 @@
 
             <div class="review-card">
                 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <div class="review-text">"Für diesen Preis unschlagbar. Die Gleitfähigkeit ist perfekt und die Verarbeitung ist hervorragend."</div>
+                <div class="review-text">"Für diesen Preis unschlagbar. Die Gleitfähigkeit ist perfekt für Gaming. Sehr empfehlenswert!"</div>
                 <div class="review-author">Thomas L., Köln</div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -669,37 +798,32 @@
 
     <script>
         // Pricing data
-        const prices = {
-            1: { price: 12.99, shipping: 0 },
-            2: { price: 11.69, shipping: 0 },
-            3: { price: 11.04, shipping: 0 },
-            4: { price: 10.39, shipping: 0 }
+        const pricingData = {
+            1: { individual: 12.99, total: 12.99, discount: 0 },
+            2: { individual: 11.69, total: 23.38, discount: 10 },
+            3: { individual: 11.04, total: 33.12, discount: 15 },
+            4: { individual: 10.39, total: 41.56, discount: 20 }
         };
 
-        function updatePrice(qty) {
-            // Update button states
-            document.querySelectorAll('.qty-button').forEach(btn => {
+        function updatePricing(qty) {
+            // Update active button
+            document.querySelectorAll('.qty-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             document.querySelector(`[data-qty="${qty}"]`).classList.add('active');
 
-            // Calculate prices
-            const pricePerUnit = prices[qty].price;
-            const totalPrice = pricePerUnit * qty;
-            const basePrice = 12.99;
-            const savings = ((basePrice - pricePerUnit) / basePrice * 100).toFixed(0);
-
-            // Update display
-            document.getElementById('priceDisplay').textContent = `EUR ${pricePerUnit.toFixed(2)}`;
-            document.getElementById('totalPrice').textContent = `EUR ${totalPrice.toFixed(2)} (${qty}× ${pricePerUnit.toFixed(2)})`;
-
-            // Show savings badge if applicable
-            const savingsBadge = document.getElementById('savingsBadge');
-            if (savings > 0) {
-                savingsBadge.style.display = 'inline-block';
-                document.getElementById('savingsAmount').textContent = `${savings}%`;
+            // Update pricing display
+            const data = pricingData[qty];
+            const totalPrice = (data.individual * qty).toFixed(2);
+            
+            document.getElementById('discountValue').textContent = data.discount + '%';
+            
+            if (data.discount > 0) {
+                document.getElementById('discountText').textContent = 
+                    `${qty}x EUR ${data.individual.toFixed(2)} = EUR ${totalPrice}`;
             } else {
-                savingsBadge.style.display = 'none';
+                document.getElementById('discountText').textContent = 
+                    `ab 2 Stück 10% Rabatt`;
             }
         }
 
@@ -714,7 +838,7 @@
             }
             
             startTime = parseInt(startTime);
-            const TIMER_DURATION = 2.5 * 24 * 60 * 60 * 1000; // 2.5 days
+            const TIMER_DURATION = 2.5 * 24 * 60 * 60 * 1000; // 2.5 Tage
             const endTime = startTime + TIMER_DURATION;
             
             function updateTimer() {
@@ -722,25 +846,28 @@
                 const remaining = endTime - now;
                 
                 if (remaining <= 0) {
-                    document.getElementById('timerDisplay').textContent = 'Abgelaufen';
+                    document.getElementById('timerValue').textContent = 'Abgelaufen';
+                    document.getElementById('remainingDays').textContent = '0 Tage';
                     return;
                 }
                 
                 const totalSeconds = Math.floor(remaining / 1000);
-                const days = Math.floor(totalSeconds / (24 * 3600));
-                const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+                const days = Math.floor(totalSeconds / 86400);
+                const hours = Math.floor((totalSeconds % 86400) / 3600);
                 const minutes = Math.floor((totalSeconds % 3600) / 60);
                 const seconds = totalSeconds % 60;
                 
                 const timeStr = `${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
-                document.getElementById('timerDisplay').textContent = timeStr;
+                document.getElementById('timerValue').textContent = timeStr;
+                
+                const daysDecimal = (remaining / (24 * 60 * 60 * 1000)).toFixed(1);
+                document.getElementById('remainingDays').textContent = daysDecimal + ' Tage';
             }
             
             updateTimer();
             setInterval(updateTimer, 1000);
         }
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', initTimer);
     </script>
 
