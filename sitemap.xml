@@ -8,14 +8,16 @@
         <lastmod>2024-04-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+
         <image:image>
             <image:loc>https://mousepads.easy-einkauf.de/images/1.png</image:loc>
-            <image:title>Fokus & Gaming Mousepad V2 - Produktbild</image:title>
+            <image:title>Fokus &amp; Gaming Mousepad V2 - Produktbild</image:title>
             <image:caption>Premium Made in Germany Mousepad</image:caption>
         </image:image>
+
         <image:image>
             <image:loc>https://mousepads.easy-einkauf.de/designs/1.png</image:loc>
-            <image:title>Fokus & Gaming Mousepad V2 - Design Cover</image:title>
+            <image:title>Fokus &amp; Gaming Mousepad V2 - Design Cover</image:title>
             <image:caption>Modernes Design mit leuchtend blau und rot Akzenten</image:caption>
         </image:image>
     </url>
