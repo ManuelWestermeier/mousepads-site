@@ -2,17 +2,11 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fokus Gaming Mousepad V2 – Premium 20×20cm Made in Germany. EUR 12,99 + Gratis Versand (2,5 Tage). Ab 2 Stück 10% Rabatt.">
-    <meta name="keywords" content="gaming mousepad, mousepad deutschland, premium mousepad, fokus mousepad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Fokus Gaming Mousepad V2 – EUR 12,99 + Gratis Versand (2,5 Tage). Made in Germany. Ab 2 Stück 10% Rabatt.">
+    <meta name="keywords" content="gaming mousepad, mousepad deutschland, premium mousepad">
     <meta name="author" content="Easy-Einkauf">
-    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1a1a1a">
-    
-    <meta property="og:title" content="Fokus Gaming Mousepad V2 – Premium Made in Germany">
-    <meta property="og:description" content="EUR 12,99 + Gratis Versand. Ab 2 Stück 10% Rabatt. Jetzt auf eBay kaufen.">
-    <meta property="og:type" content="product">
-    <meta property="og:url" content="https://mousepads.easy-einkauf.de/">
     
     <link rel="canonical" href="https://mousepads.easy-einkauf.de/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,25 +18,15 @@
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": "Fokus & Gaming Mousepad V2",
-        "description": "Premium Gaming Mousepad 20×20cm Made in Germany",
         "brand": {"@type": "Brand", "name": "Fokus"},
         "image": "https://mousepads.easy-einkauf.de/1.jpg",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "EUR",
-            "lowPrice": "10.39",
-            "highPrice": "12.99"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "127"
-        },
+        "offers": {"@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "10.39", "highPrice": "12.99"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "127"},
         "countryOfOrigin": "Germany"
     }
     </script>
     
-    <title>Fokus Gaming Mousepad V2 | Made in Germany – easy-einkauf.de</title>
+    <title>Fokus Gaming Mousepad V2 | Made in Germany</title>
     
     <style>
         * {
@@ -59,7 +43,6 @@
             --light-text: #e5e5e5;
             --white: #ffffff;
             --border: #333333;
-            --danger: #ef4444;
         }
 
         html {
@@ -81,90 +64,62 @@
             background: rgba(15, 15, 15, 0.98);
             backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--border);
-            padding: 0.75rem 1rem;
+            padding: 0.6rem 1rem;
         }
 
-        .header-inner {
-            max-width: 1400px;
-            margin: 0 auto;
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 2rem;
+            gap: 1rem;
         }
 
         .logo {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .timer-display {
+            background: rgba(25, 25, 25, 0.8);
+            padding: 0.4rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-family: 'Courier New', monospace;
+            color: var(--primary);
             font-weight: 700;
             letter-spacing: 0.5px;
-            color: var(--primary);
             white-space: nowrap;
         }
 
-        .header-timer {
-            background: rgba(25, 25, 25, 0.8);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            border: 1px solid rgba(212, 165, 116, 0.2);
-            font-size: 0.8rem;
-            font-family: 'Courier New', monospace;
-            text-align: right;
-            min-width: 140px;
+        /* ===== MAIN CONTENT ===== */
+        main {
+            padding-bottom: 2rem;
         }
 
-        .timer-label {
-            font-size: 0.65rem;
-            color: var(--light-text);
-            opacity: 0.6;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .timer-value {
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        /* ===== HERO ===== */
+        /* ===== HERO SECTION ===== */
         .hero {
-            padding: 2rem 1rem;
-            min-height: 100vh;
+            padding: 1.5rem 1rem;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .hero-wrapper {
-            max-width: 1400px;
+        /* Product Image */
+        .product-image-wrapper {
             width: 100%;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        /* PRODUCT IMAGE */
-        .hero-image {
-            position: relative;
             aspect-ratio: 1;
             background: linear-gradient(135deg, var(--medium-bg), var(--dark-bg));
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
         }
 
-        .hero-image img {
+        .product-image-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.03);
         }
 
         .image-placeholder {
@@ -173,53 +128,55 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: rgba(212, 165, 116, 0.3);
+            font-size: 3.5rem;
+            color: rgba(212, 165, 116, 0.2);
         }
 
-        /* PURCHASE INFO */
-        .hero-content {
+        /* Product Info */
+        .product-info {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1rem;
         }
 
-        .product-title {
-            font-size: 2.2rem;
+        .product-name {
+            font-size: 1.4rem;
             font-weight: 700;
             line-height: 1.2;
-            letter-spacing: -0.5px;
         }
 
-        .product-title .highlight {
+        .product-highlight {
             color: var(--primary);
         }
 
-        .product-meta {
+        .rating-row {
             display: flex;
-            gap: 1.5rem;
+            align-items: center;
+            gap: 1rem;
             font-size: 0.9rem;
         }
 
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .rating-badge {
+            background: var(--medium-bg);
+            padding: 0.4rem 0.8rem;
+            border-radius: 3px;
+            border: 1px solid var(--border);
         }
 
-        .meta-icon {
-            font-size: 1.2rem;
+        .rating-value {
+            color: var(--primary);
+            font-weight: 700;
         }
 
-        /* PRICING BOX */
-        .price-box {
+        /* Price Section */
+        .price-section {
             background: var(--medium-bg);
             border: 2px solid var(--border);
-            border-radius: 8px;
-            padding: 2rem;
+            border-radius: 6px;
+            padding: 1.2rem;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .price-main {
@@ -229,85 +186,84 @@
         .price-label {
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: var(--light-text);
             opacity: 0.7;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-current {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1;
             margin-bottom: 0.3rem;
         }
 
-        .price-shipping {
-            font-size: 0.9rem;
-            color: var(--light-text);
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
         }
 
-        .price-future {
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-top: 0.4rem;
+        }
+
+        .price-note-future {
             font-size: 0.8rem;
             color: var(--light-text);
             opacity: 0.6;
             border-top: 1px solid var(--border);
-            padding-top: 1rem;
+            padding-top: 0.8rem;
+            margin-top: 0.8rem;
         }
 
-        /* QUANTITY & SAVINGS */
-        .quantity-info {
-            background: rgba(212, 165, 116, 0.05);
+        /* Discount Box */
+        .discount-box {
+            background: rgba(212, 165, 116, 0.08);
             border: 1px solid rgba(212, 165, 116, 0.2);
-            border-radius: 6px;
-            padding: 1.2rem;
+            border-radius: 4px;
+            padding: 0.8rem;
             text-align: center;
         }
 
-        .quantity-label {
-            font-size: 0.8rem;
+        .discount-label {
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: var(--light-text);
-            opacity: 0.7;
-            margin-bottom: 0.5rem;
+            opacity: 0.6;
         }
 
         .discount-value {
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--primary);
+            margin: 0.2rem 0;
         }
 
         .discount-text {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--light-text);
-            margin-top: 0.3rem;
         }
 
-        /* QUANTITY SELECTOR */
+        /* Quantity Selector */
         .qty-selector {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0.6rem;
+            gap: 0.5rem;
         }
 
         .qty-btn {
-            padding: 0.7rem;
+            padding: 0.6rem 0.5rem;
             background: var(--dark-bg);
             border: 1px solid var(--border);
-            border-radius: 4px;
+            border-radius: 3px;
             color: var(--light-text);
-            cursor: pointer;
             font-weight: 600;
             font-size: 0.75rem;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .qty-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
+        .qty-btn:active {
+            transform: scale(0.95);
         }
 
         .qty-btn.active {
@@ -316,144 +272,86 @@
             border-color: var(--primary);
         }
 
-        /* CTA BUTTON */
+        /* CTA Button */
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
         .cta-button {
             width: 100%;
-            padding: 1.3rem 1.5rem;
+            padding: 1rem;
             background: linear-gradient(135deg, var(--primary), #c2984f);
             color: var(--dark);
             border: none;
             border-radius: 6px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 800;
             letter-spacing: 0.5px;
             cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
             display: block;
             text-align: center;
-            box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+            box-shadow: 0 3px 10px rgba(212, 165, 116, 0.2);
         }
 
         .cta-button:hover {
             background: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
         }
 
         .cta-subtext {
+            font-size: 0.75rem;
             text-align: center;
-            font-size: 0.8rem;
             color: var(--light-text);
             opacity: 0.6;
-            margin-top: 0.8rem;
         }
 
-        /* TRUST SIGNALS */
-        .trust-signals {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .trust-item {
-            text-align: center;
-        }
-
-        .trust-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .trust-text {
-            font-size: 0.75rem;
-            color: var(--light-text);
-            line-height: 1.3;
-        }
-
-        /* URGENCY BAR */
-        .urgency-bar {
+        /* Timer Alert */
+        .timer-alert {
             background: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 6px;
-            padding: 1rem;
-            text-align: center;
+            border-radius: 4px;
+            padding: 0.8rem;
             font-size: 0.85rem;
+            text-align: center;
             color: var(--light-text);
         }
 
-        .urgency-bar strong {
-            color: var(--danger);
+        .timer-alert strong {
+            color: #ef4444;
         }
 
         /* ===== DETAILS SECTION ===== */
         .details {
-            padding: 4rem 1rem;
+            padding: 2rem 1rem;
             background: var(--dark-bg);
             border-top: 1px solid var(--border);
         }
 
-        .details-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 2rem;
-            letter-spacing: -0.5px;
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .detail-image {
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, var(--medium-bg), var(--dark-bg));
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .detail-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .detail-content h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .detail-content p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
         .specs-list {
             list-style: none;
-            margin: 1.5rem 0;
+            margin-bottom: 2rem;
         }
 
         .specs-list li {
-            padding: 0.6rem 0;
+            padding: 0.8rem 0;
             border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .specs-list li:last-child {
@@ -467,14 +365,12 @@
 
         .benefits-list {
             list-style: none;
-            column-count: 2;
-            column-gap: 2rem;
         }
 
         .benefits-list li {
-            padding: 0.7rem 0 0.7rem 1.8rem;
+            padding: 0.6rem 0 0.6rem 1.5rem;
             position: relative;
-            break-inside: avoid;
+            font-size: 0.9rem;
         }
 
         .benefits-list li::before {
@@ -483,128 +379,127 @@
             left: 0;
             color: var(--primary);
             font-weight: 700;
-            font-size: 1rem;
         }
 
-        /* ===== REVIEWS ===== */
+        /* ===== REVIEWS SECTION ===== */
         .reviews {
-            padding: 3rem 1rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 2rem 1rem;
         }
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
 
         .review-card {
             background: var(--medium-bg);
-            padding: 1.5rem;
-            border-radius: 6px;
+            padding: 1rem;
+            border-radius: 4px;
             border: 1px solid var(--border);
         }
 
         .review-stars {
             color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
         }
 
         .review-text {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--light-text);
-            margin-bottom: 1rem;
-            line-height: 1.5;
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
         }
 
         .review-author {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--light-text);
-            opacity: 0.7;
+            opacity: 0.6;
             font-weight: 500;
         }
 
         /* ===== FOOTER ===== */
         footer {
             border-top: 1px solid var(--border);
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--light-text);
             opacity: 0.6;
         }
 
         .footer-links {
             margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
             color: var(--primary);
             text-decoration: none;
-            margin: 0 1rem;
             font-weight: 500;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .hero-wrapper {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+        /* ===== RESPONSIVE - DESKTOP ===== */
+        @media (min-width: 768px) {
+            .hero {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 3rem 2rem;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 3rem;
             }
 
-            .product-title {
+            .product-image-wrapper {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .product-info {
+                flex: 1;
+                gap: 1.5rem;
+            }
+
+            .product-name {
                 font-size: 1.8rem;
             }
 
-            .details-grid {
-                grid-template-columns: 1fr;
+            .price-amount {
+                font-size: 3rem;
             }
 
-            .benefits-list {
-                column-count: 1;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header-inner {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-
-            .hero {
-                padding: 1rem;
-            }
-
-            .product-title {
-                font-size: 1.4rem;
-            }
-
-            .price-current {
-                font-size: 2.2rem;
-            }
-
-            .price-box {
+            .price-section {
                 padding: 1.5rem;
             }
 
-            .product-meta {
-                flex-direction: column;
-                gap: 0.8rem;
-                font-size: 0.85rem;
-            }
-
-            .qty-selector {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .details {
-                padding: 2rem 1rem;
+                padding: 3rem 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .reviews {
+                padding: 3rem 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
             }
 
             .reviews-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            footer {
+                padding: 2rem;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -613,178 +508,138 @@
 
     <!-- HEADER -->
     <header>
-        <div class="header-inner">
+        <div class="header-content">
             <div class="logo">FOKUS</div>
-            <div class="header-timer">
-                <div class="timer-label">⏰ ENDET IN</div>
-                <div class="timer-value" id="timerValue">2d 12h 34m 56s</div>
-            </div>
+            <div class="timer-display" id="timerDisplay">2d 12h 34m 56s</div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-wrapper">
-            <!-- PRODUCT IMAGE -->
-            <div class="hero-image">
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <!-- Product Image -->
+            <div class="product-image-wrapper">
                 <img src="https://mousepads.easy-einkauf.de/1.jpg" alt="Fokus Gaming Mousepad V2" onerror="this.parentElement.innerHTML='<div class=\"image-placeholder\">📦</div>'">
             </div>
 
-            <!-- PURCHASE SECTION -->
-            <div class="hero-content">
+            <!-- Product Info & Pricing -->
+            <div class="product-info">
+                <!-- Title -->
                 <div>
-                    <h1 class="product-title">Fokus Gaming <span class="highlight">Mousepad V2</span></h1>
-                    
-                    <div class="product-meta">
-                        <div class="meta-item">
-                            <span class="meta-icon">⭐</span>
-                            <span><strong>4.8/5</strong> (127 Bewertungen)</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-icon">🇩🇪</span>
-                            <span><strong>Made in Germany</strong></span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-icon">📦</span>
-                            <span><strong>20×20 cm</strong></span>
-                        </div>
-                    </div>
+                    <h1 class="product-name">Fokus Gaming<br><span class="product-highlight">Mousepad V2</span></h1>
                 </div>
 
-                <!-- PRICING BOX -->
-                <div class="price-box">
+                <!-- Rating -->
+                <div class="rating-row">
+                    <div class="rating-badge">
+                        <span class="rating-value">⭐ 4.8/5</span>
+                    </div>
+                    <div>(127 Bewertungen)</div>
+                </div>
+
+                <!-- Price Box -->
+                <div class="price-section">
                     <div class="price-main">
-                        <div class="price-label">Aktueller Preis (2,5 Tage)</div>
-                        <div class="price-current">EUR 12,99</div>
-                        <div class="price-shipping">✓ Versand inkludiert</div>
-                        <div class="price-future">Danach: EUR 16,99 + EUR 3,99 Versand</div>
+                        <div class="price-label">Aktueller Preis</div>
+                        <div class="price-amount">EUR 12,99</div>
+                        <div class="price-note">✓ Versand inkludiert</div>
+                        <div class="price-note-future">Danach: EUR 16,99 + EUR 3,99</div>
                     </div>
 
-                    <!-- QUANTITY SELECTOR -->
+                    <!-- Discount Info -->
+                    <div class="discount-box">
+                        <div class="discount-label">Mengenrabatt</div>
+                        <div class="discount-value" id="discountPercent">0%</div>
+                        <div class="discount-text" id="discountInfo">ab 2 Stück sparen</div>
+                    </div>
+
+                    <!-- Quantity Selector -->
                     <div>
-                        <div class="quantity-info">
-                            <div class="quantity-label">Menge wählen & sparen</div>
-                            <div class="discount-value" id="discountValue">0%</div>
-                            <div class="discount-text" id="discountText">ab 2 Stück 10% Rabatt</div>
-                        </div>
-
-                        <div class="qty-selector" style="margin-top: 1rem;">
-                            <button class="qty-btn active" data-qty="1" onclick="updatePricing(1)">1x</button>
-                            <button class="qty-btn" data-qty="2" onclick="updatePricing(2)">2x</button>
-                            <button class="qty-btn" data-qty="3" onclick="updatePricing(3)">3x</button>
-                            <button class="qty-btn" data-qty="4" onclick="updatePricing(4)">4+x</button>
-                        </div>
-                    </div>
-
-                    <!-- CTA BUTTON -->
-                    <a href="https://ebay.us/m/Wgofpw" class="cta-button">
-                        🛒 JETZT AUF EBAY KAUFEN
-                    </a>
-                    <div class="cta-subtext">Sicher bezahlen • Versand & Rückgabe über eBay</div>
-
-                    <!-- TRUST SIGNALS -->
-                    <div class="trust-signals">
-                        <div class="trust-item">
-                            <div class="trust-icon">🔒</div>
-                            <div class="trust-text">Sicher<br>bezahlen</div>
-                        </div>
-                        <div class="trust-item">
-                            <div class="trust-icon">⚡</div>
-                            <div class="trust-text">Schneller<br>Versand</div>
-                        </div>
-                        <div class="trust-item">
-                            <div class="trust-icon">↩️</div>
-                            <div class="trust-text">Einfache<br>Rückgabe</div>
+                        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--light-text); opacity: 0.6; margin-bottom: 0.6rem;">Menge:</div>
+                        <div class="qty-selector">
+                            <button class="qty-btn active" data-qty="1" onclick="updateDiscount(1)">1×</button>
+                            <button class="qty-btn" data-qty="2" onclick="updateDiscount(2)">2×</button>
+                            <button class="qty-btn" data-qty="3" onclick="updateDiscount(3)">3×</button>
+                            <button class="qty-btn" data-qty="4" onclick="updateDiscount(4)">4+×</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- URGENCY BAR -->
-                <div class="urgency-bar">
-                    ⏰ Sonderpreis mit kostenlosem Versand nur noch <strong id="remainingDays">2,5 Tage</strong> verfügbar
+                <!-- CTA -->
+                <div class="cta-container">
+                    <a href="https://ebay.us/m/Wgofpw" class="cta-button">🛒 AUF EBAY KAUFEN</a>
+                    <div class="cta-subtext">Sicher bezahlen • Versand über eBay</div>
+                </div>
+
+                <!-- Timer Alert -->
+                <div class="timer-alert">
+                    ⏰ Sonderpreis nur noch <strong id="timeRemaining">2,5 Tage</strong>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DETAILS SECTION -->
-    <section class="details">
-        <div class="details-wrapper">
-            <h2 class="section-title">Warum Fokus?</h2>
+        <!-- DETAILS SECTION -->
+        <section class="details">
+            <h2 class="section-title">Spezifikationen</h2>
+            <ul class="specs-list">
+                <li>
+                    <span>Größe</span>
+                    <span class="spec-value">20 × 20 cm</span>
+                </li>
+                <li>
+                    <span>Material</span>
+                    <span class="spec-value">Premium-Mix</span>
+                </li>
+                <li>
+                    <span>Herkunft</span>
+                    <span class="spec-value">Deutschland</span>
+                </li>
+                <li>
+                    <span>Gewicht</span>
+                    <span class="spec-value">Ultra-leicht</span>
+                </li>
+                <li>
+                    <span>Anti-Rutsch</span>
+                    <span class="spec-value">✓ Ja</span>
+                </li>
+            </ul>
 
-            <div class="details-grid">
-                <div class="detail-image">
-                    <img src="https://mousepads.easy-einkauf.de/2.jpg" alt="Fokus Mousepad Details" onerror="this.parentElement.innerHTML='<div style=\"width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(212,165,116,0.3)\">📸</div>'">
-                </div>
-
-                <div class="detail-content">
-                    <h3>Premium-Material & Verarbeitung</h3>
-                    <p>Das Gaming Mousepad V2 ist das Resultat intensiver Entwicklung. Jedes Detail wurde optimiert für maximale Performance beim Gaming und bei der Arbeit.</p>
-
-                    <h3 style="margin-top: 1.5rem;">Technische Spezifikationen</h3>
-                    <ul class="specs-list">
-                        <li>
-                            <span>Größe</span>
-                            <span class="spec-value">20 × 20 cm</span>
-                        </li>
-                        <li>
-                            <span>Material</span>
-                            <span class="spec-value">Premium-Mix</span>
-                        </li>
-                        <li>
-                            <span>Gewicht</span>
-                            <span class="spec-value">Ultra-leicht</span>
-                        </li>
-                        <li>
-                            <span>Herkunft</span>
-                            <span class="spec-value">Deutschland</span>
-                        </li>
-                        <li>
-                            <span>Anti-Rutsch</span>
-                            <span class="spec-value">✓ Ja</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2 class="section-title" style="margin-top: 3rem;">Die wichtigsten Vorteile</h2>
+            <h2 class="section-title" style="margin-top: 2rem;">Vorteile</h2>
             <ul class="benefits-list">
                 <li>Optimierte Oberflächentextur für höchste Mausgeschwindigkeit</li>
                 <li>Professionelle Anti-Rutsch-Unterseite mit Grip-Technologie</li>
                 <li>Langlebiges Premium-Material mit bewährter Haltbarkeit</li>
                 <li>Ergonomisches Design für komfortable Handposition</li>
-                <li>Perfekt für Competitive Gaming und Produktivität</li>
-                <li>Einfache Reinigung und lange Lebensdauer</li>
-                <li>Kompatibel mit allen Maustypen und Sensitivitäten</li>
+                <li>Perfekt für Gaming und Produktivität</li>
                 <li>Made in Germany – höchste Qualitätsstandards</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- REVIEWS SECTION -->
-    <section class="reviews">
-        <h2 class="section-title">Das sagen echte Kunden</h2>
+        <!-- REVIEWS SECTION -->
+        <section class="reviews">
+            <h2 class="section-title">Kundenbewertungen</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Bestes Gaming Mousepad! Die Kontrolle ist unglaublich."</div>
+                    <div class="review-author">Marco K., Hamburg</div>
+                </div>
 
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <div class="review-text">"Bestes Gaming Mousepad das ich je hatte. Die Kontrolle ist unglaublich und es rutscht überhaupt nicht weg."</div>
-                <div class="review-author">Marco K., Hamburg</div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Made in Germany Qualität! Sieht nach Wochen noch wie neu aus."</div>
+                    <div class="review-author">Jessica M., München</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Für diesen Preis unschlagbar. Sehr empfehlenswert!"</div>
+                    <div class="review-author">Thomas L., Köln</div>
+                </div>
             </div>
-
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <div class="review-text">"Endlich ein Mousepad Made in Germany. Qualität merkt man sofort und es sieht auch nach Wochen noch wie neu aus."</div>
-                <div class="review-author">Jessica M., München</div>
-            </div>
-
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <div class="review-text">"Für diesen Preis unschlagbar. Die Gleitfähigkeit ist perfekt für Gaming. Sehr empfehlenswert!"</div>
-                <div class="review-author">Thomas L., Köln</div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
@@ -793,41 +648,30 @@
             <a href="https://easy-einkauf.de/datenschutz">Datenschutz</a>
             <a href="https://easy-einkauf.de/">Easy-Einkauf</a>
         </div>
-        <p>&copy; 2026 Easy-Einkauf. Fokus & Gaming Mousepad V2 – Made in Germany</p>
+        <p>&copy; 2026 Easy-Einkauf. Fokus Mousepad V2 – Made in Germany</p>
     </footer>
 
     <script>
-        // Pricing data
-        const pricingData = {
-            1: { individual: 12.99, total: 12.99, discount: 0 },
-            2: { individual: 11.69, total: 23.38, discount: 10 },
-            3: { individual: 11.04, total: 33.12, discount: 15 },
-            4: { individual: 10.39, total: 41.56, discount: 20 }
+        // Discount data
+        const discounts = {
+            1: { percent: 0, text: 'ab 2 Stück 10% Rabatt' },
+            2: { percent: 10, text: '2 × EUR 11,69 = EUR 23,38' },
+            3: { percent: 15, text: '3 × EUR 11,04 = EUR 33,12' },
+            4: { percent: 20, text: '4+ × EUR 10,39' }
         };
 
-        function updatePricing(qty) {
-            // Update active button
-            document.querySelectorAll('.qty-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+        function updateDiscount(qty) {
+            // Update button state
+            document.querySelectorAll('.qty-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelector(`[data-qty="${qty}"]`).classList.add('active');
 
-            // Update pricing display
-            const data = pricingData[qty];
-            const totalPrice = (data.individual * qty).toFixed(2);
-            
-            document.getElementById('discountValue').textContent = data.discount + '%';
-            
-            if (data.discount > 0) {
-                document.getElementById('discountText').textContent = 
-                    `${qty}x EUR ${data.individual.toFixed(2)} = EUR ${totalPrice}`;
-            } else {
-                document.getElementById('discountText').textContent = 
-                    `ab 2 Stück 10% Rabatt`;
-            }
+            // Update discount display
+            const data = discounts[qty];
+            document.getElementById('discountPercent').textContent = data.percent + '%';
+            document.getElementById('discountInfo').textContent = data.text;
         }
 
-        // Timer function
+        // Timer
         function initTimer() {
             const timerKey = 'fokus-mousepad-timer-start';
             let startTime = localStorage.getItem(timerKey);
@@ -838,7 +682,7 @@
             }
             
             startTime = parseInt(startTime);
-            const TIMER_DURATION = 2.5 * 24 * 60 * 60 * 1000; // 2.5 Tage
+            const TIMER_DURATION = 2.5 * 24 * 60 * 60 * 1000;
             const endTime = startTime + TIMER_DURATION;
             
             function updateTimer() {
@@ -846,8 +690,8 @@
                 const remaining = endTime - now;
                 
                 if (remaining <= 0) {
-                    document.getElementById('timerValue').textContent = 'Abgelaufen';
-                    document.getElementById('remainingDays').textContent = '0 Tage';
+                    document.getElementById('timerDisplay').textContent = 'Abgelaufen';
+                    document.getElementById('timeRemaining').textContent = '0 Tage';
                     return;
                 }
                 
@@ -858,10 +702,10 @@
                 const seconds = totalSeconds % 60;
                 
                 const timeStr = `${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
-                document.getElementById('timerValue').textContent = timeStr;
+                document.getElementById('timerDisplay').textContent = timeStr;
                 
                 const daysDecimal = (remaining / (24 * 60 * 60 * 1000)).toFixed(1);
-                document.getElementById('remainingDays').textContent = daysDecimal + ' Tage';
+                document.getElementById('timeRemaining').textContent = daysDecimal + ' Tage';
             }
             
             updateTimer();
